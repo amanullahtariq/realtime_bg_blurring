@@ -23,7 +23,16 @@ resized2 = np.pad(resized,((0,pad_x),(0,0),(0,0)),mode='constant')
 
 res = deeplab_model.predict(np.expand_dims(resized2,0))
 labels = np.argmax(res.squeeze(),-1)
+labels = labels[:-pad_x]
 
-plt.imshow(labels[:-pad_x])
 
+
+mask = labels == 0
+
+resizedFrame = cv2.resize(img, (labels.shape[1],labels.shape[0]))
+blur = cv2.GaussianBlur(resizedFrame, (41,41), 0)
+resizedFrame[mask] = blur[mask]
+plt.imshow(resizedFrame)
 plt.waitforbuttonpress()
+
+
