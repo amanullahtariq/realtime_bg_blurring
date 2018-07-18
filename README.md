@@ -1,1 +1,1 @@
-# blur-bg
+# Removing watermark 
