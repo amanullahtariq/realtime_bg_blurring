@@ -16,7 +16,7 @@ def start_video():
     vid = WebcamVideoStream(src=0).start()
     cv2.namedWindow("result", cv2.WINDOW_NORMAL)
     blurValue = (3, 3)
-    blur_bg_value = 31
+    blur_bg_value = 81
 
     while True:
         frame = vid.read()
@@ -37,7 +37,7 @@ def start_video():
         mask_person = labels != 0
 
         resizedFrame = cv2.resize(frame, (labels.shape[1], labels.shape[0]))
-        blur = cv2.medianBlur(resizedFrame, blur_bg_value)
+        blur = cv2.GaussianBlur(resizedFrame, (blur_bg_value,blur_bg_value), 0)
 
         blur_person = cv2.GaussianBlur(resizedFrame, blurValue, 0)
 
@@ -72,7 +72,7 @@ def blur_image(image_path):
     labels = np.argmax(res.squeeze(), -1)
     labels = labels[:-pad_x ]
 
-    # print(np.unique(labels))
+    # # print(np.unique(labels))
 
     mask = labels == 0
     mask_person = labels != 0
@@ -85,8 +85,13 @@ def blur_image(image_path):
     resizedFrame[mask] = blur_bg[mask]
     resizedFrame[mask_person] = blur_person[mask_person]
 
-    plt.imshow(resizedFrame)
-    plt.waitforbuttonpress()
+    # plt.imshow(resizedFrame)
+    # plt.waitforbuttonpress()
+
+    cv2.imshow("result", resizedFrame)
+    cv2.waitKey(0)
+    # if cv2.waitKey(1) & 0xFF == ord('q'):
+    #     break
 
 
 def test_blurring():
@@ -116,9 +121,10 @@ def test_blurring():
 
 
 if __name__== "__main__":
-    blur_image("imgs//image1.jpg")
+
+    # blur_image("imgs//image1.jpg")
     #test_blurring()
-    #start_video()
+    start_video()
 
 
 
