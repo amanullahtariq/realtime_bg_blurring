@@ -49,6 +49,8 @@ def test_blurring():
 
     cv2.imshow( "HSV Image", hsv)
 
+    cv2.waitKey(10)
+
 
 
 if __name__== "__main__":
