@@ -5,9 +5,7 @@ from model import Deeplabv3
 import os
 from imutils.video import WebcamVideoStream
 
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
 
 def start_video():
     # deeplab_model = Deeplabv3(backbone='xception', OS=8)
@@ -51,7 +49,6 @@ def start_video():
     vid.stop()
     cv2.destroyAllWindows()
 
-
 def blur_image(image_path):
     blurValue = (3, 3)
     blur_bg_value = 31
@@ -93,7 +90,6 @@ def blur_image(image_path):
     # if cv2.waitKey(1) & 0xFF == ord('q'):
     #     break
 
-
 def test_blurring():
     img = cv2.imread("imgs//image1.jpg")
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -117,7 +113,6 @@ def test_blurring():
 
 
     cv2.waitKey(0)
-
 
 
 if __name__== "__main__":
