@@ -1,6 +1,17 @@
 # Real Time Background Blurring using DeeplabV3
 
 ## Quick summary
+
+Few days ago Microsoft introduced Teams with a background blur feature for video calls using AI, so I used AI to build my own
+
+
+Here's a clip with slightly more blur
+
+
+You can read the blog post about it [here](http://amanullahtariq.com) 
+
+
+
 This is the code to detect the parking space for the car given 2D image from the google maps and 3D point Cloud data of the current enivornment.
 
 ## Purpose
