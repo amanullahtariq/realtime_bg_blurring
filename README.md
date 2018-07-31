@@ -18,6 +18,7 @@ This is the code to detect the parking space for the car given 2D image from the
  DeeplabV3 is a state-of-the-art model for Semantic Segmentation develop by Google Inc. 
 
 
+
 ## Results
 * Initial data 2D image taking from the google image and plotting the lines using OpenCV
 
@@ -25,16 +26,32 @@ This is the code to detect the parking space for the car given 2D image from the
 * Applying filters to enhance the lines of the parking spots
 ![LaneDetection2D](images/2d.png)
 
+
+## Run
+```
+sh setup.sh
+```
+
+
 ## Requiremnts
 For this project to run you need:
-* Python 3+
+* Python 3.5
+* Tensorflow 1.4
 * OpenCV
 * imutils
 * Keras
 
 
-### Who do I talk to? ###
-I would be happy to talk to you about this project and if you are interested then we can further enhance this project to.
+## References
+
+1.  **Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation**<br />
+    Liang-Chieh Chen and Yukun Zhu and George Papandreou and Florian Schroff and Hartwig Adam <br />
+    [[link]](https://arxiv.org/abs/1802.02611). In ECCV, 2018.
+
+2.  **MobileNetV2: Inverted Residuals and Linear Bottlenecks** <br />
+    Mark Sandler and Andrew Howard and Menglong Zhu and Andrey Zhmoginov and Liang-Chieh Chen. <br />
+    [[link]](https://arxiv.org/abs/1801.04381). In CVPR, 2018.
+
 
 ### Contact
 * Amanullah Tariq 
