@@ -29,7 +29,7 @@ This is the code to detect the parking space for the car given 2D image from the
 
 ## Run
 
-Goto the directory
+Goto the directory and run the following code
 ```
 python main.py
 ```
