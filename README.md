@@ -8,7 +8,9 @@ Few days ago Microsoft introduced Teams with a background blur feature for video
 ![](imgs/image_thumb-22.png)
 
 
-![](imgs/image_thumb-22.png)
+![](imgs/image_thumb-27.png)
+
+
 
 Here's a clip with slightly more blur
 
@@ -27,8 +29,8 @@ This is the code to detect the parking space for the car given 2D image from the
 * Initial data 2D image taking from the google image and plotting the lines using OpenCV
 
 
-* Applying filters to enhance the lines of the parking spots
-![LaneDetection2D](images/2d.png)
+* Applying filters to enhance the lines of the parking spots.
+
 
 
 ## Run
