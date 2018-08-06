@@ -2,35 +2,29 @@
 This repository contains the code for real time background blurring using deep learning model *[DeeplabV3](https://arxiv.org/abs/1706.05587)*. We used the [Keras implementation of DeeplabV3](https://github.com/bonlime/keras-deeplab-v3-plus) with pretrained weights. 
 
 ## Introduction
-Few days ago Microsoft introduced Teams with a background blur feature for video calls using AI, so I used AI to build my own
-
-* Applying filters to enhance the lines of the parking spots
-![](imgs/image_thumb-22.png)
-
+Few months back Microsoft introduced Teams with a background blur feature for video calls using AI which catch the attention of the several people. As you can see in the image below.
 
 ![](imgs/image_thumb-27.png)
 
+You can read more about the Microsoft Team [here](https://www.businessinsider.de/microsoft-teams-gets-free-version-background-blur-feature-2018-7?r=US&IR=T)
 
 
-Here's a clip with slightly more blur
+Blurring the video background using machine learning can help reduce us videoconferencing faux pas. Basically if you have an interview or a very important meeting and you are at home or coffee shop just use this feature and it can save you from lots of embarrassment. 
+
+![](imgs/image_thumb-22.png)
 
 
 You can read the blog post about it [here](http://amanullahtariq.com/blog_posts/realtime_bg_blur.html) 
 
 
-This is the code to detect the parking space for the car given 2D image from the google maps and 3D point Cloud data of the current enivornment.
-
 ## DeepLabV3
- DeeplabV3 is a state-of-the-art model for Semantic Segmentation develop by Google Inc. 
-
+ DeeplabV3 is a state-of-the-art model for Semantic Segmentation develop by Google Inc. We are using [this](https://github.com/bonlime/keras-deeplab-v3-plus) implementation of DeepLabV3 in Keras.
 
 
 ## Results
-* Initial data 2D image taking from the google image and plotting the lines using OpenCV
+For the experiement, we used the real-time input from the webcam and blur the background of it. To keep it simple and easy we didn't used any *data preprocessing* or *computer vision* techniques to improve the input to the machine learning model. For the testing place the camera in the low light to check effective-ness and completeness of our approach. 
 
-
-* Applying filters to enhance the lines of the parking spots.
-
+![Result1](imgs/result.jpeg)
 
 
 ## Run
